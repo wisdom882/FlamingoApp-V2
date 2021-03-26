@@ -6,14 +6,15 @@ import "firebase/storage";
 import "firebase/analytics";
 
 //client credentials
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCSEHh9WZ_YC3INeQsG2Tqm5iv9YpiBMIA",
-  authDomain: "asynclearning-e216e.firebaseapp.com",
-  databaseURL: "https://asynclearning-e216e.firebaseio.com",
-  projectId: "asynclearning-e216e",
-  storageBucket: "asynclearning-e216e.appspot.com",
-  messagingSenderId: "665630737781",
-  appId: "1:665630737781:web:6e699c3642fa1fbf343f3c",
+  apiKey: "AIzaSyDR0sI5luNYpQiHGV7G4CC0rvtxVWsrArs",
+  authDomain: "flamingoproject-69d59.firebaseapp.com",
+  projectId: "flamingoproject-69d59",
+  storageBucket: "flamingoproject-69d59.appspot.com",
+  messagingSenderId: "13584757515",
+  appId: "1:13584757515:web:7fea351b74010133ef280e",
+  measurementId: "G-RQV10PXGST"
 };
 
 export const FirebaseContext = createContext();
@@ -24,11 +25,14 @@ export default function FirebaseProvider({ children }) {
   //the DB
   const [db, setDb] = useState();
   //authentication
+  
   const [auth, setAuth] = useState();
   //load current user
   const [user, setUser] = useState(null);
   const [loadingUser, setLoadingUser] = useState(true);
+  const [googleProvider, setGoogleProvider] = useState(null)
 
+  
   useEffect(() => {
     //check if app is already running
     if (!firebaseApp && !firebase.apps.length) {
@@ -41,6 +45,7 @@ export default function FirebaseProvider({ children }) {
     setFirebaseApp(firebase);
     setDb(firebase.firestore());
     setAuth(firebase.auth());
+    setGoogleProvider(new firebase.auth.GoogleAuthProvider())
 
     firebase.auth().onAuthStateChanged(async (user) => {
       try {
@@ -55,13 +60,22 @@ export default function FirebaseProvider({ children }) {
         console.error(error);
       }
     });
-  }, []);
+  }, [firebaseApp]);
 
   return (
     <FirebaseContext.Provider
-      value={{ firebaseApp, db, auth, user, setUser, loadingUser }}
+      value={{ 
+        firebaseApp, 
+        db, 
+        auth, 
+        user, 
+        setUser, 
+        loadingUser, 
+        googleProvider }}
     >
       {children}
     </FirebaseContext.Provider>
   );
 }
+
+export const useFirebase = () => useContext(FirebaseContext)
