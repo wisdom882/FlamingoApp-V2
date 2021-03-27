@@ -44,8 +44,10 @@ export default function FirebaseProvider({ children }) {
     }
     setFirebaseApp(firebase);
     setDb(firebase.firestore());
-    setAuth(firebase.auth());
-    setGoogleProvider(new firebase.auth.GoogleAuthProvider())
+    setAuth(firebase.auth()); 
+    const googleProvider = new firebase.auth.GoogleAuthProvider()
+    googleProvider.setCustomParameters({prompt:"select_account"});
+    setGoogleProvider(googleProvider)
 
     firebase.auth().onAuthStateChanged(async (user) => {
       try {

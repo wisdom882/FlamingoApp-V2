@@ -4,9 +4,15 @@ import FormInput from '../../components/form-input/form-input.component'
 
 import './SignIn.styles.css'
 
+import CustomButton from '../../components/custom-button/custom-button.component'
+
+import { useFirebase } from '../../context/firebaseContext'
+
 const SignIn = () => {
     const [email, setEmail] = React.useState('')
     const [password, setPassword] = React.useState('')
+
+    const { auth,googleProvider } = useFirebase()
 
     const handleChange = (event) => {
         const {name, value} = event.target
@@ -39,11 +45,18 @@ const SignIn = () => {
                     label="password" 
                     handleChange={handleChange} required/>
                 </div>
+                
                 <div>
-                    <input name='submit' 
-                    type="submit" 
-                    value='submit' 
-                   />
+                    <CustomButton type="submit" 
+                    value='submit'>
+                            SIGN IN
+                    </CustomButton>
+                </div>
+
+                <div>
+                    <CustomButton onClick={() => auth.signInWithPopup(googleProvider) }>
+                        SIGN IN WITH GOOGLE
+                    </CustomButton>
                 </div>
             </form>
         </div>
