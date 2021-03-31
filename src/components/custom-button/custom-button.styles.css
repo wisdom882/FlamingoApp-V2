@@ -19,3 +19,14 @@
     color: black;
     border: 1px solid black;
   }
+
+  .custom-button.google-sign-in{
+      background-color: blue;
+      color:white;
+  }
+
+  .custom-button.google-sign-in:hover {
+    background-color: blue;
+    color:white;
+    border: none;
+}

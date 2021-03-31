@@ -46,17 +46,21 @@ const SignIn = () => {
                     handleChange={handleChange} required/>
                 </div>
                 
-                <div>
+                
+                
+
+                <div className="buttons">
                     <CustomButton type="submit" 
                     value='submit'>
                             SIGN IN
                     </CustomButton>
-                </div>
-
-                <div>
-                    <CustomButton onClick={() => auth.signInWithPopup(googleProvider) }>
+                    <CustomButton onClick={() => auth.signInWithPopup(googleProvider) } isGoogleSignIn>
                         SIGN IN WITH GOOGLE
                     </CustomButton>
+                </div>
+
+                <div className="small-gap">
+                    <input type='submit' onClick={() => auth.signOut()} value="SIGN OUT"/>
                 </div>
             </form>
         </div>

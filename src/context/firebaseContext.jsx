@@ -49,12 +49,15 @@ export default function FirebaseProvider({ children }) {
     googleProvider.setCustomParameters({prompt:"select_account"});
     setGoogleProvider(googleProvider)
 
-    firebase.auth().onAuthStateChanged(async (user) => {
+    const unSubscribeFromAuth= firebase.auth().onAuthStateChanged(async (user) => {
       try {
         if (user) {
           const { uid, displayName, email } = user;
           setUser({ uid, displayName, email });
           setLoadingUser(true);
+          createUserProfileDocument(user);
+
+        
         } else {
           setUser(null);
         }
@@ -62,7 +65,33 @@ export default function FirebaseProvider({ children }) {
         console.error(error);
       }
     });
+
+    return unSubscribeFromAuth;
   }, [firebaseApp]);
+
+  const createUserProfileDocument = async (userAuth, additionalData) => {
+
+    if(!userAuth) return;
+    const userRef = db.doc(`users/${userAuth.uid}`)
+    const snapshot = await userRef.get()
+
+    if(!snapshot.exists){
+      const {displayName,email} = userAuth;
+      const createdAt =  new Date()
+      try{
+        await userRef.set({
+          displayName,
+          email,
+          createdAt,
+          ...additionalData,
+        });
+      }catch(error){
+        console.log("Error creating user", error.message)
+      }
+    }
+
+    return userRef
+  };
 
   return (
     <FirebaseContext.Provider
