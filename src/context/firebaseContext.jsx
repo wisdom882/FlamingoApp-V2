@@ -78,9 +78,9 @@ export default function FirebaseProvider({ children }) {
     if(!snapshot.exists){
       const {displayName,email} = userAuth;
       const createdAt =  new Date()
+      additionalData = additionalData? {displayName,...additionalData} : {displayName}
       try{
         await userRef.set({
-          displayName,
           email,
           createdAt,
           ...additionalData,
@@ -101,7 +101,8 @@ export default function FirebaseProvider({ children }) {
         auth, 
         user, 
         setUser, 
-        loadingUser, 
+        loadingUser,
+        createUserProfileDocument, 
         googleProvider }}
     >
       {children}

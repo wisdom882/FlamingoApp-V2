@@ -13,6 +13,7 @@ const SignIn = () => {
     const [password, setPassword] = React.useState('')
 
     const { auth,googleProvider } = useFirebase()
+    const {createUserProfileDocument} = useFirebase();
 
     const handleChange = (event) => {
         const {name, value} = event.target
@@ -21,6 +22,7 @@ const SignIn = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
+        //createUserProfileDocument(user,{displayName})
         setEmail('')
         setPassword('')
     }
