@@ -8,24 +8,34 @@ import CustomButton from '../../components/custom-button/custom-button.component
 
 import { useFirebase } from '../../context/firebaseContext'
 
-const SignIn = () => {
+
+const SignIn = ({history}) => {
     const [email, setEmail] = React.useState('')
     const [password, setPassword] = React.useState('')
 
     const { auth,googleProvider } = useFirebase()
-    const {createUserProfileDocument} = useFirebase();
+    
 
     const handleChange = (event) => {
         const {name, value} = event.target
         name === 'email' ? setEmail(value) : setPassword(value)
     }
 
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        //createUserProfileDocument(user,{displayName})
-        setEmail('')
-        setPassword('')
-    }
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+    
+        try {
+          const {user} = await auth.signInWithEmailAndPassword(email, password);
+          if(user !== null)
+          {
+            history.replace("/userhome");
+          }
+          setEmail("");
+          setPassword("");
+        } catch (error) {
+          console.log(error);
+        }
+      };
 
     return (
         <div className='sign-in'>
