@@ -1,0 +1,25 @@
+.header{
+    display:flex;
+    justify-content: space-between;
+    
+    
+}
+
+.menu{
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menuList{
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+
+.menuList:hover{
+    color: green;
+    text-decoration: underline;
+}

@@ -1,0 +1,8 @@
+.heroBanner{
+    background-position: center;
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all;
+    
+}
