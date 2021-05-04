@@ -1,3 +1,6 @@
 .Logo{
     display:flex;
+    margin: 10px;
+    transition: rotate;
+    filter: contrast(5%);
 }

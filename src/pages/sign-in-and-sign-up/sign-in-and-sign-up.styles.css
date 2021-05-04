@@ -3,4 +3,8 @@
     display: flex;
     justify-content: space-evenly;
     margin: 30px auto;
+    background-color:rgb(200, 243, 200);
+    opacity: 1;
+    padding: 20px;
+    border-radius: 10px;
 }

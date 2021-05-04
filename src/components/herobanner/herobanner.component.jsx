@@ -7,7 +7,7 @@ import './herobanner.styles.css'
 const HeroBanner = ({imageUrl,text,textPosition, gridNumber}) => {
     return(
         <div className="heroBanner" style={{backgroundImage:`url(${imageUrl})`, gridColumn:gridNumber}} >
-            <h1 style={{justifyContent:textPosition}}>{text}</h1>
+            <h1 >{text}</h1>
         </div>
 
     )

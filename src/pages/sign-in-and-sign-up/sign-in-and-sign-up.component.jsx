@@ -8,7 +8,7 @@ import SignUp from '../../components/sign-up/sign-up.component'
 const SignInAndSignUpPage = ({history}) => (
 
     <div className='sign-in-and-sign-up'>
-        <SignIn history={history}/>
+        <SignIn history={history} />
         <SignUp />
     </div>
 )

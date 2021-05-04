@@ -71,9 +71,9 @@ const SignIn = ({history}) => {
                     </CustomButton>
                 </div>
 
-                <div className="small-gap">
+                {/* <div className="small-gap">
                     <input type='submit' onClick={() => auth.signOut()} value="SIGN OUT"/>
-                </div>
+                </div> */}
             </form>
         </div>
     );
