@@ -1,20 +1,19 @@
 import  React from 'react'
 
 import FormInput from '../../components/form-input/form-input.component'
-
 import './SignIn.styles.css'
-
 import CustomButton from '../../components/custom-button/custom-button.component'
 
-import { useFirebase } from '../../context/firebaseContext'
+import { useRestApi } from '../../context/restApiContext'
+import {useFirebase} from '../../context/firebaseContext'
 
 
 const SignIn = ({history}) => {
     const [email, setEmail] = React.useState('')
     const [password, setPassword] = React.useState('')
 
-    const { auth,googleProvider } = useFirebase()
-    
+    const {loginUser, user } = useRestApi()
+    //const {auth, googleProvider} = useFirebase()
 
     const handleChange = (event) => {
         const {name, value} = event.target
@@ -23,19 +22,15 @@ const SignIn = ({history}) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-    
-        try {
-          const {user} = await auth.signInWithEmailAndPassword(email, password);
-          if(user !== null)
-          {
+        await loginUser(email, password)
+        if(user !== null)
+        {
             history.replace("/userhome");
-          }
-          setEmail("");
-          setPassword("");
-        } catch (error) {
-          console.log(error);
         }
-      };
+        setEmail("");
+        setPassword("");
+        } 
+      
 
     return (
         <div className='sign-in'>
@@ -66,7 +61,7 @@ const SignIn = ({history}) => {
                     value='submit'>
                             SIGN IN
                     </CustomButton>
-                    <CustomButton onClick={() => auth.signInWithPopup(googleProvider) } isGoogleSignIn>
+                    <CustomButton  isGoogleSignIn>
                         SIGN IN WITH GOOGLE
                     </CustomButton>
                 </div>

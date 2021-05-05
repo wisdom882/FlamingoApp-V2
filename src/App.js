@@ -8,6 +8,7 @@ import NotFound from './admin/Notfound.component'
 import Header from './components/header/header.component'
 import UnAuthenticatedHome from './pages/unauthenticatedhome/unauthenticatedhome.component'
 import Footer from './components/footer/footer.component'
+import RestApiProvider from './context/restApiContext'
 import Turbine from './components/Turbine/turbine.component'
 //import CheckIfUserIsLoggedIn from './components/userManagement';
 
@@ -15,7 +16,7 @@ import Turbine from './components/Turbine/turbine.component'
 function App() {
  
   return (
-    <FirebaseProvider>
+    <RestApiProvider>
       <div className="App">
         <div className="background"></div>
         <Header/>
@@ -29,7 +30,7 @@ function App() {
         <Footer/>
         {/* <Turbine/> */}
       </div>
-    </FirebaseProvider>
+    </RestApiProvider>
     
   );
 }

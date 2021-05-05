@@ -7,6 +7,7 @@ import Logo from '../logo/logo.component'
 import {Link} from 'react-router-dom'
 
 import {useFirebase} from "../../context/firebaseContext"
+import {useRestApi} from '../../context/restApiContext'
 
 
 
@@ -17,7 +18,8 @@ const Header = () => {
         {path:'/contact', text:'Contact', className:'nav-menu'},
         {path:'/login', text:'Login', className:'nav-menu'}
     ]) 
-const {user,auth} = useFirebase()
+//const {auth} = useFirebase()
+const {user} = useRestApi()
 console.log(user)
     return (
         
@@ -33,8 +35,8 @@ console.log(user)
                     Search
                 </Link>
                 {user ? ( <div>
-                    {user.displayName?.split(" ",1)}
-                    <Link to="/"  onClick={() => auth.signOut()} className='menuList'>
+                    {user.firstName}
+                    <Link to="/"  className='menuList'>
                     SignOut 
                 </Link>
                 

@@ -15,7 +15,7 @@ const SignUp = () => {
     const [confirmPassword, setConfirmPassword] = React.useState('')
 
 
-const {auth,createUserProfileDocument} = useFirebase();
+//const {auth,createUserProfileDocument} = useFirebase();
 
 const handleChange = (event) => {
     const { name,value} = event.target
@@ -37,9 +37,23 @@ const handleSubmit = async (event) => {
     }
 
     try {
-        const {user} = await auth.createUserWithEmailAndPassword(email, password)
-        console.log(user)
-        await createUserProfileDocument(user,{displayName})
+        const rawResponse = await fetch("https://restapi-flamingo-05051967.herokuapp.com/api/users/signup",{
+            method:"POST",
+            headers:{
+                'Accept':'application/json',
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify({
+            firstName:displayName,
+            lastName:displayName,
+            email:email,
+            password:password
+            })
+        })
+       
+      const user = await rawResponse.json()
+      console.log(user)
+        //await createUserProfileDocument(user,{displayName})
 
         //clear form
         setEmail('')
