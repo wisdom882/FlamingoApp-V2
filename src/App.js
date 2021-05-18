@@ -25,6 +25,7 @@ function App() {
           <Route path="/not-found" component={NotFound}/>
           <Route exact path="/" component={UnAuthenticatedHome} />
           <Route path="/login" component={SignInAndSignUpPage}/>
+          <Route path="/football anatomy" component={SignInAndSignUpPage}/>
           <Redirect to="/not-found"/>
         </Switch>
         <Footer/>

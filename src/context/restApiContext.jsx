@@ -29,9 +29,25 @@ export default function RestApiProvider({children}){
             console.log(error);
           }
         };
+    const signOut = async(user) => {
+        try{
+            const rawResponse = await fetch(`${APIURL}/users/signOutUser`,{
+                method:"POST",
+                headers:{
+                    'Accept':'application/json',
+                    'Content-Type':'application/json'
+                },
+            })
+            const signedOut = await rawResponse.json()
+            console.log(signedOut)
+        } catch(error){
+            console.log(error)
+        }
+    }
         return(
             <RestApiContext.Provider value={{
                 loginUser,
+                signOut,
                 user
             }}>
                 {children}

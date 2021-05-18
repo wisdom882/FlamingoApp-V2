@@ -12,7 +12,7 @@ const SignIn = ({history}) => {
     const [email, setEmail] = React.useState('')
     const [password, setPassword] = React.useState('')
 
-    const {loginUser, user } = useRestApi()
+    const {loginUser, user, signOut } = useRestApi()
     //const {auth, googleProvider} = useFirebase()
 
     const handleChange = (event) => {

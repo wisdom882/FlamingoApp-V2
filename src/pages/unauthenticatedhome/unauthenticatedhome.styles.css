@@ -5,3 +5,16 @@
     row-gap: 10px;
     column-gap: 10px;
 }
+
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    
+}
+/* h2{
+    position: relative;
+    font-size: 14vw;
+    text-transform: uppercase;
+} */
