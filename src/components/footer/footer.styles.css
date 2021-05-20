@@ -20,7 +20,7 @@ ul{
 	list-style: none;
 }
 .footer{
-	background-color: #24262b;
+	background-color:#1d1818;
     padding: 70px 0;
 }
 .footer-col{
@@ -51,10 +51,10 @@ ul{
 .footer-col ul li a{
 	font-size: 16px;
 	text-transform: capitalize;
-	color: #ffffff;
+	color: #e21111;
 	text-decoration: none;
 	font-weight: 300;
-	color: #bbbbbb;
+	color: #880707;
 	display: block;
 	transition: all 0.3s ease;
 }
@@ -64,8 +64,8 @@ ul{
 }
 .footer-col .social-links a{
 	display: inline-block;
-	height: 40px;
-	width: 40px;
+	height: 20px;
+	width: 20px;
 	background-color: rgba(255,255,255,0.2);
 	margin:0 10px 10px 0;
 	text-align: center;

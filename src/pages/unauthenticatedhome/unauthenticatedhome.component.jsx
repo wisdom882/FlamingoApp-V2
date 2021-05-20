@@ -16,8 +16,8 @@ const UnAuthenticatedHome = () => {
                     organised and coached.
                 </h1>
             </div>
-        <div className="unAuthHome">
-            <HeroBanner imageUrl="Games.jpg"  text='Football Anatomy' textPosition='flex-end' gridNumber='1'/>
+        <div className="unAuthHome" >
+            <HeroBanner imageUrl="Games.jpg"  text='Football Anatomy' textPosition='flex-end' gridNumber='1' path='/footballanatomy'/>
             <HeroBanner imageUrl="shop.jpg"  text='Shop' textPosition='flex-start'gridNumber='2/3'/>  
         </div>
         </div>

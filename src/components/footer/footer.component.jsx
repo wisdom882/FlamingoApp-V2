@@ -12,7 +12,6 @@ const Footer = () => {
                     <ul>
                         <li>about us</li>
                         <li>our services</li>
-                        <li>privacy policy</li>
                         <li>Contact</li>
                     </ul>
                 </div>

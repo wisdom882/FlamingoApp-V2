@@ -1,0 +1,23 @@
+.footballanatomy{
+    display: grid;
+    margin: 35px;
+    row-gap: 10px;
+    column-gap: 10px;
+    
+    
+}
+
+.formation{
+    grid-column: 1;
+    grid-row:2/3;
+}
+
+.position{
+    grid-column: 2;
+    grid-row:2/6;
+}
+
+.tactics{
+    grid-column: 2;
+    grid-row:5/6;
+}

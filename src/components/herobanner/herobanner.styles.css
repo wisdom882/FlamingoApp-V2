@@ -11,7 +11,7 @@
     display: flex;
     justify-content: end;
     color: whitesmoke;
-    
+    box-shadow: 0 10px 6px -6px #777;
 }
 
 .heroBanner:hover{

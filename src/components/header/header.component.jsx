@@ -28,12 +28,12 @@ console.log(user)
             <Logo logoType="png" imageUrl='logo_transparent.png' />
             <div className="menu">
     
-                <Link to="/userhome" className='menuList'>
+                {/* <Link to="/userhome" className='menuList'>
                     Leagues
                 </Link>
                 <Link to="/userhome" className='menuList'>
                     Search
-                </Link>
+                </Link> */}
                 {user ? ( <div>
                     {user.firstName}
                     <Link to="/"  className='menuList'>

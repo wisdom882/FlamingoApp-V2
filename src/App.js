@@ -9,6 +9,7 @@ import Header from './components/header/header.component'
 import UnAuthenticatedHome from './pages/unauthenticatedhome/unauthenticatedhome.component'
 import Footer from './components/footer/footer.component'
 import RestApiProvider from './context/restApiContext'
+import footballAnatomy from "./pages/footbal-anatomy/football-anatomy.component"
 import Turbine from './components/Turbine/turbine.component'
 //import CheckIfUserIsLoggedIn from './components/userManagement';
 
@@ -25,7 +26,7 @@ function App() {
           <Route path="/not-found" component={NotFound}/>
           <Route exact path="/" component={UnAuthenticatedHome} />
           <Route path="/login" component={SignInAndSignUpPage}/>
-          <Route path="/football anatomy" component={SignInAndSignUpPage}/>
+          <Route path="/footballanatomy" component={footballAnatomy}/>
           <Redirect to="/not-found"/>
         </Switch>
         <Footer/>
