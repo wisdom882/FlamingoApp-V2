@@ -8,12 +8,8 @@ const UnAuthenticatedHome = () => {
     return(
         <div>
              <div className="text">
-                <h1 data-text="This is a football website that briefly
-                    talks about the way football is being played,
-                    organised and coached.">
-                    This is a football website that briefly
-                    talks about the way football is being played,
-                    organised and coached.
+                <h1 data-text="Football in glance.">
+                    Football in a glance
                 </h1>
             </div>
         <div className="unAuthHome" >

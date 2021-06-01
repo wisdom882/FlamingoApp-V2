@@ -10,7 +10,9 @@ import UnAuthenticatedHome from './pages/unauthenticatedhome/unauthenticatedhome
 import Footer from './components/footer/footer.component'
 import RestApiProvider from './context/restApiContext'
 import footballAnatomy from "./pages/footbal-anatomy/football-anatomy.component"
-import Turbine from './components/Turbine/turbine.component'
+import tactics from "./pages/tactics/tactics.component"
+import positions from './pages/positions/positions.component'
+import formations from './pages/formation/formation.component'
 //import CheckIfUserIsLoggedIn from './components/userManagement';
 
 
@@ -27,6 +29,9 @@ function App() {
           <Route exact path="/" component={UnAuthenticatedHome} />
           <Route path="/login" component={SignInAndSignUpPage}/>
           <Route path="/footballanatomy" component={footballAnatomy}/>
+          <Route path="/formations" component={formations}/>
+          <Route path="/positions" component={positions}/>
+          <Route path="/tactics" component={tactics}/>
           <Redirect to="/not-found"/>
         </Switch>
         <Footer/>

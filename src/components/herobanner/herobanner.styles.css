@@ -1,12 +1,12 @@
 .heroBanner{
     background-position: center;
-    height: 40vh;
+    height: 55vh;
     background-repeat: no-repeat;
     background-size: cover;
     transition: all;
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
-    border-radius: 3px;
+    border-radius: 5px;
     margin: 10px;
     display: flex;
     justify-content: end;
@@ -16,4 +16,10 @@
 
 .heroBanner:hover{
     transform: scale(1.05);
+}
+
+.heroBanner h1{
+    font-size: 30px;
+  font-family: "Helvetica Neue", sans-serif;
+  
 }

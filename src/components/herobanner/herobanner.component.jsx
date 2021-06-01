@@ -15,7 +15,8 @@ const HeroBanner = ({imageUrl,text,textPosition, gridNumber,path}) => {
         history.push(path)
     }
     return(
-        <div onClick={() => handleClick(path)} className="heroBanner" style={{backgroundImage:`url(${imageUrl})`, gridColumn:gridNumber}} >
+        <div onClick={() => handleClick(path)} className="heroBanner" style={{backgroundImage:`url(${imageUrl})`,
+        gridColumn:gridNumber}} >
             <h1 >{text}</h1>
         </div>
        
