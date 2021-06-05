@@ -4,10 +4,10 @@ import './footer.styles.css'
 
 const Footer = () => {
     return(
-        <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
+        <footer className="footer">
+        <div className="container">
+            <div className="row">
+                <div className="footer-col">
                     <h4>Company</h4>
                     <ul>
                         <li>about us</li>
@@ -15,7 +15,7 @@ const Footer = () => {
                         <li>Contact</li>
                     </ul>
                 </div>
-                <div class="footer-col">
+                <div className="footer-col">
                     <h4>Socials</h4>
                     <ul>
                         <li>Facebook</li>

@@ -4,14 +4,3 @@
     color: rgb(0, 0, 0);
 }
 
-.paragraph{
-    color: rgba(235, 189, 91, 0.733);
-}
- 
-.picture{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: blue;
-    border-radius: 20px;
-} 
