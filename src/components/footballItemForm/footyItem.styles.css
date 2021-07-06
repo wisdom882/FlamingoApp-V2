@@ -1,0 +1,58 @@
+.footballItemForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+
+.footballItemForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.footballItemForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.footballItemForm .inputBox input{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+}
+
+.footballItemForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.footballItemForm .inputBox input:focus ~ span,
+.footballItemForm .inputBox input:valid ~ span,
+.footballItemForm .inputBox textarea:focus ~ span,
+.footballItemForm .inputBox textarea:valid ~ span
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.footballItemForm .inputBox input[type='Submit']{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}

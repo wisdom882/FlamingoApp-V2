@@ -5,7 +5,6 @@ import './SignIn.styles.css'
 import CustomButton from '../../components/custom-button/custom-button.component'
 
 import { useRestApi } from '../../context/restApiContext'
-import {useFirebase} from '../../context/firebaseContext'
 
 
 const SignIn = ({history}) => {
@@ -23,6 +22,7 @@ const SignIn = ({history}) => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         await loginUser(email, password)
+        console.log('user Signed in',user)
         if(user !== null)
         {
             history.replace("/userhome");

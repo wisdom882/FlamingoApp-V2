@@ -139,6 +139,56 @@ formation:[
         This formation was very suited for the park the bus and longball tactic, because the team could
         dit deep and soak up pressure and then when in possesion make a long pass for either of the 2 strikers up top`,
         imageUrl:"442.jpg"
+    },
+
+    {
+        title:"4-4-1-1",
+        description:`The 4411 is very similar to the 442 formation, they both have the same 2 banks of 4
+        but in this case there is a attacking midfielder who just sits behind the line striker up top.
+        The attacking midfielder has to be good technically as he is the link between the 4 midfielders
+        and the striker` 
+        ,
+        imageUrl:"4-4-1-1.jpg"
+    },
+
+    {
+        title:"4-4-2",
+        description:`The 442 formation is a very old formation most commonly used by Manchester United in the early 2000s.
+        This involved two banks of 4 and 2 strikers that is 4 defenders, the usual 2 centre backs and 2 Fullbacks
+        the other bank of 4 consists of 2 midfielders and 2 traditional wingers.
+        This formation was very suited for the park the bus and longball tactic, because the team could
+        dit deep and soak up pressure and then when in possesion make a long pass for either of the 2 strikers up top`,
+        imageUrl:"442.jpg"
+    },
+
+    {
+        title:"4-4-2",
+        description:`The 442 formation is a very old formation most commonly used by Manchester United in the early 2000s.
+        This involved two banks of 4 and 2 strikers that is 4 defenders, the usual 2 centre backs and 2 Fullbacks
+        the other bank of 4 consists of 2 midfielders and 2 traditional wingers.
+        This formation was very suited for the park the bus and longball tactic, because the team could
+        dit deep and soak up pressure and then when in possesion make a long pass for either of the 2 strikers up top`,
+        imageUrl:"442.jpg"
+    },
+
+    {
+        title:"4-4-2",
+        description:`The 442 formation is a very old formation most commonly used by Manchester United in the early 2000s.
+        This involved two banks of 4 and 2 strikers that is 4 defenders, the usual 2 centre backs and 2 Fullbacks
+        the other bank of 4 consists of 2 midfielders and 2 traditional wingers.
+        This formation was very suited for the park the bus and longball tactic, because the team could
+        dit deep and soak up pressure and then when in possesion make a long pass for either of the 2 strikers up top`,
+        imageUrl:"442.jpg"
+    },
+
+    {
+        title:"4-4-2",
+        description:`The 442 formation is a very old formation most commonly used by Manchester United in the early 2000s.
+        This involved two banks of 4 and 2 strikers that is 4 defenders, the usual 2 centre backs and 2 Fullbacks
+        the other bank of 4 consists of 2 midfielders and 2 traditional wingers.
+        This formation was very suited for the park the bus and longball tactic, because the team could
+        dit deep and soak up pressure and then when in possesion make a long pass for either of the 2 strikers up top`,
+        imageUrl:"442.jpg"
     }
 ]
     
