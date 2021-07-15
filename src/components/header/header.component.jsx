@@ -45,6 +45,10 @@ console.log(user)
                 ( <Link to="/login" className='menuList'>
                     SignIn
                 </Link> )}
+
+                {user?.isAdmin ? (<div>
+                    <Link to = "/footballanatomy" className="menuList"> Admin </Link>
+                </div>) : (<div></div>)}
             </div>
         </div>
     )

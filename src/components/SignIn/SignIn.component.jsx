@@ -1,4 +1,4 @@
-import  React from 'react'
+import  React, {useCallback} from 'react'
 
 import FormInput from '../../components/form-input/form-input.component'
 import './SignIn.styles.css'
@@ -19,17 +19,17 @@ const SignIn = ({history}) => {
         name === 'email' ? setEmail(value) : setPassword(value)
     }
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = useCallback( async (event) => {
         event.preventDefault();
-        await loginUser(email, password)
-        console.log('user Signed in',user)
-        if(user !== null)
-        {
-            history.replace("/userhome");
+        const returnedUser = await loginUser(email, password)
+        console.log('user Signed in',returnedUser)
+        if(returnedUser != null){
+
+            history.replace("/footballanatomy");
         }
         setEmail("");
         setPassword("");
-        } 
+    },[email, history, loginUser, password])
       
 
     return (

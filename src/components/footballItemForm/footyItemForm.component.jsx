@@ -1,34 +1,42 @@
-import React from 'react'
+import React from "react";
+//import axios from "axios";
 
-import './footyItem.styles.css'
+import "./footyItem.styles.css";
 
-const addFootballItem = () =>{
-    return (
+const addFootballItem = () => {
+  const handleSubmit = () => {};
 
+  const handleFile = (e) => {
+    console.log(e.target.files[0]);
+  };
+
+  const handleUpload = () => {};
+  return (
     <div className="footballItemForm">
-        <form>
-            <h2>Add Football Item</h2>
-            <div className="inputBox">
-                <input type="text" name='' required='required' />
-                <span>Title</span>
-            </div>
+      <form onSubmit={handleSubmit}>
+        <h2>Add Football Item</h2>
+        <div className="inputBox">
+          <input type="text" name="" required="required" />
+          <span>Title</span>
+        </div>
 
-            <div className="inputBox">
-                <input type="text" name='' required='required' />
-                <span>Description</span>
-            </div>
+        <div className="inputBox">
+          <input type="text" name="" required="required" />
+          <span>Description</span>
+        </div>
 
-            <div className="inputBox">
+        {/* <div className="inputBox">
                 <input type="text" name='' required='required' />
                 <span>Image Url</span>
-            </div>
-            <div className="inputBox">
-                <input type="submit" name='' value='Add' />
-            </div>
-        </form>
-
+            </div> */}
+        <input type="file" onChange={handleFile} />
+        <button onClick={handleUpload}>Upload file</button>
+        <div className="inputBox">
+          <input type="submit" name="" value="Add" />
+        </div>
+      </form>
     </div>
-    )
-}
+  );
+};
 
 export default addFootballItem;

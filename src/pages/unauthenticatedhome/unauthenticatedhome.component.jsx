@@ -1,28 +1,34 @@
-import React from 'react'
+import React from "react";
 
-import './unauthenticatedhome.styles.css'
+import "./unauthenticatedhome.styles.css";
 
-import HeroBanner from '../../components/herobanner/herobanner.component'
+import HeroBanner from "../../components/herobanner/herobanner.component";
 
-import addFootballItem from '../../components/footballItemForm/footyItemForm.component'
+import addFootballItem from "../../components/footballItemForm/footyItemForm.component";
 
 const UnAuthenticatedHome = () => {
-    return(
-        <div>
-             <div className="text">
-                <h1 data-text="Football in glance.">
-                    Football in a glance
-                </h1>
-            </div>
-        <div className="unAuthHome" >
-            <HeroBanner imageUrl="Games.jpg"  text='Football Anatomy' textPosition='flex-end' gridNumber='1' path='/footballanatomy'/>
-            <HeroBanner imageUrl="shop.jpg"  text='Shop' textPosition='flex-start'gridNumber='2/3'/>  
+  return (
+    <div>
+      <div className="text">
+        <h1 data-text="Football in glance.">Football in a glance</h1>
+      </div>
+      <div className="unAuthHome">
+        <HeroBanner
+          imageUrl="Games.jpg"
+          text="Football Anatomy"
+          textPosition="flex-end"
+          gridNumber="1"
+          path="/login"
+        />
+        <HeroBanner
+          imageUrl="shop.jpg"
+          text="Shop"
+          textPosition="flex-start"
+          gridNumber="2/3"
+        />
+      </div>
+    </div>
+  );
+};
 
-        </div>
-        </div>
-       
-    )
-
-}
-
-export default UnAuthenticatedHome
+export default UnAuthenticatedHome;
