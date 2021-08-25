@@ -1,13 +1,12 @@
-import React from 'react'
-import addFootballItem from "../../components/footballItemForm/footyItemForm.component.jsx";
+import React from "react";
+import AddFootballItem from "../../components/footballItemForm/footyItemForm.component.jsx";
 
-const footballPage = () =>
-{
-    return(
-        <div>
-            <addFootballItem />
-        </div>
-    )
-}
+const FootballPage = () => {
+  return (
+    <div>
+      <AddFootballItem />
+    </div>
+  );
+};
 
-export default footballPage;
+export default FootballPage;

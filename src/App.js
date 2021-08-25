@@ -9,12 +9,13 @@ import Header from "./components/header/header.component";
 import UnAuthenticatedHome from "./pages/unauthenticatedhome/unauthenticatedhome.component";
 import Footer from "./components/footer/footer.component";
 import RestApiProvider from "./context/restApiContext";
-import footballAnatomy from "./pages/footbal-anatomy/football-anatomy.component";
+import FootballAnatomy from "./pages/football-anatomy/football-anatomy.component.jsx";
 import tactics from "./pages/tactics/tactics.component";
 import positions from "./pages/positions/positions.component";
 import formations from "./pages/formation/formation.component";
 import addFootballItem from "./components/footballItemForm/footyItemForm.component";
 import SignUpSuccess from "./components/signUpSuccess/signUpSuccess.components";
+import GuardedRoute from "./components/guardedRoute/guardedRoute";
 //import CheckIfUserIsLoggedIn from './components/userManagement';
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
           <Route path="/not-found" component={NotFound} />
           <Route exact path="/" component={UnAuthenticatedHome} />
           <Route path="/login" component={SignInAndSignUpPage} />
-          <Route path="/footballanatomy" component={footballAnatomy} />
+          <GuardedRoute path="/footballanatomy" component={FootballAnatomy} />
           <Route path="/formations" component={formations} />
           <Route path="/positions" component={positions} />
           <Route path="/tactics" component={tactics} />

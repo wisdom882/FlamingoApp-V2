@@ -1,16 +1,15 @@
-import React from 'react'
+import React from "react";
 
-import './formation.styles.css'
+import "./formation.styles.css";
 
-import FootballDetails from "../../components/football-details/football-details.component"
+import FootballDetails from "../../components/football-details/football-details.component";
 
 const formations = () => {
-    return(
-        <div className="footballanatomy">
-            <FootballDetails detailsType='formation'/> 
-        </div>
-    )
+  return (
+    <div>
+      <FootballDetails detailsType="formation" />
+    </div>
+  );
+};
 
-}
-
-export default formations
+export default formations;

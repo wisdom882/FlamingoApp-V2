@@ -1,10 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./herobanner.styles.css";
 import { useHistory } from "react-router-dom";
-import { useRestApi } from "../../context/restApiContext";
 
-const HeroBanner = ({ imageUrl, text, textPosition, gridNumber, path }) => {
+const HeroBanner = ({ imageUrl, text, gridNumber, path }) => {
   //handleclick
   //take in path
   const history = useHistory();

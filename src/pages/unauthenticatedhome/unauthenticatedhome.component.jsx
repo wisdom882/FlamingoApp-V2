@@ -4,8 +4,6 @@ import "./unauthenticatedhome.styles.css";
 
 import HeroBanner from "../../components/herobanner/herobanner.component";
 
-import addFootballItem from "../../components/footballItemForm/footyItemForm.component";
-
 const UnAuthenticatedHome = () => {
   return (
     <div>
@@ -19,12 +17,6 @@ const UnAuthenticatedHome = () => {
           textPosition="flex-end"
           gridNumber="1"
           path="/login"
-        />
-        <HeroBanner
-          imageUrl="shop.jpg"
-          text="Shop"
-          textPosition="flex-start"
-          gridNumber="2/3"
         />
       </div>
     </div>

@@ -1,7 +1,16 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .footballItemForm{
     width: 40%;
     padding: 40px;
     background: #fff;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .footballItemForm h2{
@@ -55,4 +64,28 @@
     cursor: pointer;
     padding: 10px;
     font-size: 18px;
+    border-radius: 10px;
 }
+
+.footballItemForm .inputBox input[type='Submit']:hover {
+    background-color: #00b28f;
+  }
+
+.chooseAndUploadFile{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.upload{
+    padding: 10px;
+    color: white;
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload:hover {
+    background-color: #00b28f;
+  }
+
