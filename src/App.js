@@ -37,7 +37,7 @@ function App() {
           <Route path="/signUpSuccess" component={SignUpSuccess} />
           <Redirect to="/not-found" />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
         {/* <Turbine/> */}
       </div>
     </RestApiProvider>
