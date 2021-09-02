@@ -1,5 +1,5 @@
 import React from "react";
-
+import FootballDetails from "../../components/football-details/football-details.component";
 import "./unauthenticatedhome.styles.css";
 
 import HeroBanner from "../../components/herobanner/herobanner.component";
@@ -10,7 +10,8 @@ const UnAuthenticatedHome = () => {
       <div className="text">
         <h1 data-text="Football in glance.">Football in a glance</h1>
       </div>
-      <div className="unAuthHome">
+      <FootballDetails detailsType="HomePage" />
+      {/* <div className="unAuthHome">
         <HeroBanner
           imageUrl="Games.jpg"
           text="Football Anatomy"
@@ -18,7 +19,7 @@ const UnAuthenticatedHome = () => {
           gridNumber="1"
           path="/login"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

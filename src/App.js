@@ -38,7 +38,6 @@ function App() {
           <Redirect to="/not-found" />
         </Switch>
         {/* <Footer /> */}
-        {/* <Turbine/> */}
       </div>
     </RestApiProvider>
   );

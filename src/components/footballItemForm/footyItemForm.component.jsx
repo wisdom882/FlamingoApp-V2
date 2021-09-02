@@ -69,14 +69,14 @@ const AddFootballItem = () => {
               <span>Title</span>
             </div>
 
-            <div className="inputBox">
-              <input
+            <div className="description">
+              <span>Description</span>
+              <textarea
                 type="text"
                 name="Description"
                 required="required"
                 onChange={handleChange}
-              />
-              <span>Description</span>
+              ></textarea>
             </div>
 
             {/* <div className="inputBox">

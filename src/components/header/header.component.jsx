@@ -23,6 +23,13 @@ const Header = () => {
     <div className="header">
       <Logo logoType="png" imageUrl="logo_transparent.png" />
       <div className="menu">
+        <Link to="/" className="menuList">
+          Home
+        </Link>
+        <Link to="/login" className="menuList">
+          Football Anatomy
+        </Link>
+
         {user ? (
           <div>
             {user.firstName}
