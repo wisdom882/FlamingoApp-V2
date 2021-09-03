@@ -1,17 +1,27 @@
-import React from 'react'
+import React from "react";
+import FootballDetails from "../../components/football-details/football-details.component";
+import "./unauthenticatedhome.styles.css";
 
-import './unauthenticatedhome.styles.css'
-
-import HeroBanner from '../../components/herobanner/herobanner.component'
+import HeroBanner from "../../components/herobanner/herobanner.component";
 
 const UnAuthenticatedHome = () => {
-    return(
-        <div className="unAuthHome">
-            <HeroBanner imageUrl="Games.jpg"  text='Games' textPosition='flex-end' gridNumber='1'/>
-            <HeroBanner imageUrl="Ball.jpg"  text='News' textPosition='flex-start'gridNumber='2/3'/>
-        </div>
-    )
+  return (
+    <div>
+      <div className="text">
+        <h1 data-text="Football in glance.">Football in a glance</h1>
+      </div>
+      <FootballDetails detailsType="HomePage" />
+      {/* <div className="unAuthHome">
+        <HeroBanner
+          imageUrl="Games.jpg"
+          text="Football Anatomy"
+          textPosition="flex-end"
+          gridNumber="1"
+          path="/login"
+        />
+      </div> */}
+    </div>
+  );
+};
 
-}
-
-export default UnAuthenticatedHome
+export default UnAuthenticatedHome;

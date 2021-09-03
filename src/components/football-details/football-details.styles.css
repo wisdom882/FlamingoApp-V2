@@ -1,0 +1,36 @@
+.paragraph{
+    color: white;
+    font-family: Verdana;
+    font-size: 15px;
+    font-weight: 400;
+}
+ 
+.picture{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+} 
+
+.football{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+
+}
+
+.description{
+    width: 50%
+}
+
+.img{
+    border: white solid 7px;
+    border-radius: 5px;
+}
+
+.right-padding{
+    padding-right: 10%;
+}
+
+.left-padding{
+    padding-left: 10%;
+}

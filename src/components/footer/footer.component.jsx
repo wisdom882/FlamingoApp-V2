@@ -1,35 +1,39 @@
-import React from 'react'
+import React from "react";
 
-import './footer.styles.css'
+import "./footer.styles.css";
 
 const Footer = () => {
-    return(
-        <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li>about us</li>
-                        <li>our services</li>
-                        <li>privacy policy</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Socials</h4>
-                    <ul>
-                        <li>Facebook</li>
-                        <li>SnapChat</li>
-                        <li>Instagram</li>
-                    </ul>
-                </div>
-                
-            </div>
+  return (
+    <footer className="footer">
+      <div className="container">
+        <div className="row">
+          <div className="footer-col">
+            <h4>Socials</h4>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/wisdom882/">Facebook</a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/wisdom_882/">Instagram</a>
+              </li>
+              <li>
+                <a href="mailto:miabiyewisdom@gmail.com">Email</a>
+              </li>
+            </ul>
+          </div>
+          <div className="footer-col">
+            {/* <h4>Socials</h4>
+            <ul>
+              <li>Facebook</li>
+              <li>SnapChat</li>
+              <li>Instagram</li>
+              <li>Contact</li>
+            </ul> */}
+          </div>
         </div>
-   </footer>
-    )
+      </div>
+    </footer>
+  );
+};
 
-}
-
-export default Footer
+export default Footer;

@@ -1,17 +1,25 @@
-import React from 'react'
+import React from "react";
+import "./herobanner.styles.css";
+import { useHistory } from "react-router-dom";
 
-import './herobanner.styles.css'
+const HeroBanner = ({ imageUrl, text, gridNumber, path }) => {
+  //handleclick
+  //take in path
+  const history = useHistory();
+  const handleClick = (path) => {
+    console.log("clicks");
+    console.log(path);
+    history.push(path);
+  };
+  return (
+    <div
+      onClick={() => handleClick(path)}
+      className="heroBanner"
+      style={{ backgroundImage: `url(${imageUrl})`, gridColumn: gridNumber }}
+    >
+      <h1>{text}</h1>
+    </div>
+  );
+};
 
-
-
-const HeroBanner = ({imageUrl,text,textPosition, gridNumber}) => {
-    return(
-        <div className="heroBanner" style={{backgroundImage:`url(${imageUrl})`, gridColumn:gridNumber}} >
-            <h1 >{text}</h1>
-        </div>
-
-    )
-
-}
-
-export default HeroBanner
+export default HeroBanner;
