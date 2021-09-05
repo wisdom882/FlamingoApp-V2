@@ -2,7 +2,7 @@ import React from "react";
 import "./herobanner.styles.css";
 import { useHistory } from "react-router-dom";
 
-const HeroBanner = ({ imageUrl, text, gridNumber, path }) => {
+const HeroBanner = ({ imageUrl, text, body, path }) => {
   //handleclick
   //take in path
   const history = useHistory();
@@ -12,12 +12,18 @@ const HeroBanner = ({ imageUrl, text, gridNumber, path }) => {
     history.push(path);
   };
   return (
-    <div
-      onClick={() => handleClick(path)}
-      className="heroBanner"
-      style={{ backgroundImage: `url(${imageUrl})`, gridColumn: gridNumber }}
-    >
-      <h1>{text}</h1>
+    <div className="heroBanner">
+      <div className="imageContainer">
+        <img src={imageUrl} alt=" " />
+      </div>
+
+      <div className="bannertitle">
+        <h2>{text}</h2>
+      </div>
+
+      <div className="bannerBody">
+        <p>{body}</p>
+      </div>
     </div>
   );
 };

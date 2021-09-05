@@ -14,7 +14,7 @@ const FootballAnatomy = () => {
           imageUrl="positions.png"
           text="Positions"
           textPosition="flex-start"
-          gridNumber="1/4"
+          body="the quick brown fox jumped over the lazy dog"
           path="positions"
         />
       </div>
@@ -23,7 +23,7 @@ const FootballAnatomy = () => {
           imageUrl="formation.jpg"
           text="Formations"
           textPosition="flex-end"
-          gridNumber="2/4"
+          body="the quick brown fox jumped over the lazy dog"
           path="/formations"
         />
       </div>
@@ -32,7 +32,7 @@ const FootballAnatomy = () => {
           imageUrl="https://storage.googleapis.com/flamingoapp_wisdom/Tactics.jpg"
           text="Tactics"
           textPosition="flex-start"
-          gridNumber="3/4"
+          body="the quick brown fox jumped over the lazy dog"
           path="/tactics"
         />
       </div>
@@ -43,7 +43,7 @@ const FootballAnatomy = () => {
             imageUrl="https://storage.googleapis.com/flamingoapp_wisdom/blackfeminist.png"
             text="Add Football Item"
             textPosition="flex-start"
-            gridNumber="4/4"
+            body="the quick brown fox jumped over the lazy dog"
             path="/footballForm"
           />
         </div>

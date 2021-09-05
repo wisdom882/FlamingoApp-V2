@@ -22,7 +22,6 @@ function App() {
   return (
     <RestApiProvider>
       <div className="App">
-        <div className="background"></div>
         <Header />
         <Switch>
           <Route path="/userhome" component={Home} />
