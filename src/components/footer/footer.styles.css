@@ -1,109 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-html{
-	height:100%
-}
-body{
-	line-height: 1.5;
-	font-family: 'Poppins', sans-serif;
-	min-height: 100%;
-
-}
-*{
-	margin:0;
-	padding:0;
-	box-sizing: border-box;
-
-}
-.container{
-	max-width: 1170px;
-}
-.row{
-	display: flex;
-	flex-wrap: wrap;
-	
-}
-ul{
-	list-style: none;
-}
 .footer{
-	background-color:#1b1917;
-    padding: 20px 0;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+	margin-inline: auto;
+	max-width: 1280px;
+	padding-bottom: 9px;
+	padding-top: 9px;
+	padding-inline-start: 16px;
+	padding-inline-end: 16px;
+	background-color: rgb(197, 235, 196);
 }
-.footer-col{
-   width: 25%;
-   padding: 0 15px;
 
+.socialIcons{
+	width: 36vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	flex-direction: row;
 }
-.footer-col h4{
-	font-size: 18px;
-	color: #ffffff;
-	text-transform: capitalize;
-	margin-bottom: 35px;
-	font-weight: 500;
-	position: relative;
+
+.socialLists{
+	padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: rgb(11, 88, 28);
 	
 }
-.footer-col h4::before{
-	content: '';
-	position: absolute;
-	left:0;
-	bottom: -10px;
-	background-color: #e91e63;
-	height: 2px;
-	box-sizing: border-box;
-	width: 50px;
-}
-.footer-col ul li:not(:last-child){
-	margin-bottom: 10px;
-}
-.footer-col ul li a{
-	font-size: 16px;
-	text-transform: capitalize;
-	color: #e21111;
-	text-decoration: none;
-	font-weight: 300;
-	color: #880707;
-	display: block;
-	transition: all 0.3s ease;
-}
-.footer-col ul li a:hover{
-	color: #ffffff;
-	padding-left: 8px;
-}
-.footer-col .social-links a{
-	display: inline-block;
-	height: 20px;
-	width: 20px;
-	background-color: rgba(255,255,255,0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
-}
-.footer-col .social-links a:hover{
+
+.text-color{
 	color: white;
-	background-color: #ffffff;
 }
-
-/*responsive*/
-@media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
-}
-}
-@media(max-width: 574px){
-  .footer-col{
-    width: 100%;
-}
-}
-
-
-
-
