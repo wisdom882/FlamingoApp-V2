@@ -34,7 +34,7 @@
     font-weight: 500;
 }
 
-.button{
+.football-anatomy-button{
     margin-top: 24px;
     border-radius: 8px;
     background-color: #3182ce;
@@ -44,7 +44,7 @@
     padding: 16px;
 }
 
-.button:hover{
+.football-anatomy-button:hover{
     background-color: #2573bb;
     cursor: pointer;
 }

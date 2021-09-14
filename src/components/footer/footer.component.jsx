@@ -1,5 +1,11 @@
 import React from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faFacebook,
+  faInstagram,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 import "./footer.styles.css";
 
 const Footer = () => {
@@ -7,16 +13,29 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="socialIcons">
-          <h4>Socials</h4>
-          <li className="socialLists">
-            <a href="https://www.facebook.com/wisdom882/">Facebook</a>
-          </li>
-          <li className="socialLists">
-            <a href="https://www.instagram.com/wisdom_882/">Instagram</a>
-          </li>
-          <li className="socialLists">
-            <a href="mailto:miabiyewisdom@gmail.com">Email</a>
-          </li>
+          <a href="#">
+            <FontAwesomeIcon icon={faFacebook} className="icons" />
+          </a>
+          <a href="#">
+            <FontAwesomeIcon icon={faInstagram} className="icons" />
+          </a>
+          <a href="#">
+            <FontAwesomeIcon icon={faGithub} className="icons" />
+          </a>
+
+          <ul className="list">
+            <li>
+              <a href="#">About</a>
+            </li>
+
+            <li>
+              <a href="#">Services</a>
+            </li>
+
+            <li>
+              <a href="#">terms</a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>

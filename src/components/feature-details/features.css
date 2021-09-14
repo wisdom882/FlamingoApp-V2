@@ -1,0 +1,22 @@
+.description{
+    color: white;
+    font-family: Verdana;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.right-padding{
+    padding-right: 10%;
+}
+
+.left-padding{
+    padding-left: 10%;
+}
+
+.features{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+
+}
+ 

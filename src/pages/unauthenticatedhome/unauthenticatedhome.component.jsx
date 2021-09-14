@@ -1,13 +1,8 @@
 import React from "react";
 import "./unauthenticatedhome.styles.css";
-import { useHistory } from "react-router-dom";
-import { useRestApi } from "../../context/restApiContext";
+import Features from "../../components/feature-details/featuresservice";
 
 const UnAuthenticatedHome = () => {
-  // const HandleClick = () => {
-  //   const history = useHistory();
-  //   ///history.push("/login");
-  // };
   return (
     <div className="background">
       <div className="text">
@@ -15,8 +10,11 @@ const UnAuthenticatedHome = () => {
         <p className="paragraph">
           Short dive into the inner workings of football
         </p>
-        <button className="button">Football Anatomy</button>
+        <a href="/login" className="football-anatomy-button">
+          Football Anatomy
+        </a>
       </div>
+      <Features type="homepageFeatures" />
     </div>
   );
 };
