@@ -5,7 +5,7 @@ import './formationButton.styles.css'
 const FormationButton = (text) => {
     return(
         <div className="formation">
-            <button>SHANTELL!!!</button>
+            <button>jkn</button>
         </div>
     )
 }

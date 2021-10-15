@@ -76,6 +76,7 @@ const AddFootballItem = () => {
                 name="Description"
                 required="required"
                 onChange={handleChange}
+                className="textArea"
               ></textarea>
             </div>
 
@@ -89,7 +90,9 @@ const AddFootballItem = () => {
                 Upload file
               </button>
               <div>
-                <span>{publicUrl ? publicUrl : "No file uploaded"}</span>
+                <p className="publicUrl">
+                  {publicUrl ? publicUrl : "No file uploaded"}
+                </p>
               </div>
             </div>
             <div className="inputBox">

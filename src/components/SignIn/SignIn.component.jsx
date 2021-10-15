@@ -26,6 +26,12 @@ const SignIn = ({ history }) => {
       if (returnedUser != null) {
         history.replace("/footballanatomy");
       }
+      let now = new Date();
+      now.setMinutes(now.getMinutes() + 15);
+      let expire = new Date(now);
+      document.cookie = `user=${JSON.stringify(
+        returnedUser
+      )}; expires=${expire.toUTCString()}`;
       setEmail("");
       setPassword("");
     },
@@ -34,7 +40,7 @@ const SignIn = ({ history }) => {
 
   return (
     <div className="sign-in">
-      <h2>I have already an account</h2>
+      <h2>Already an account?</h2>
       <span>-Sign in with your email and password</span>
 
       <form onSubmit={handleSubmit}>

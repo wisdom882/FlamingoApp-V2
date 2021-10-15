@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-
+import { useHistory } from "react-router-dom";
 import "./header.styles.css";
 
 import Logo from "../logo/logo.component";
@@ -19,6 +19,11 @@ const Header = () => {
   //const {auth} = useFirebase()
   const { user, setUser } = useRestApi();
   console.log(user);
+   const history = useHistory();
+  const logOut = () => {
+    history.push("/login")
+    setUser(null)
+  }
   return (
     <div className="header">
       <Logo logoType="png" imageUrl="logo_transparent.png" />
@@ -32,10 +37,10 @@ const Header = () => {
 
         {user ? (
           <div>
-            {user.firstName}
-            <Link to="/" className="menuList">
-              SignOut
-            </Link>
+            {user.firstName + "    "}
+            <button className="signout-button" onClick={logOut}>
+              Sign Out
+            </button>
           </div>
         ) : (
           <Link to="/login" className="menuList">

@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 40px;
 }
 
 .footballItemForm{
@@ -74,6 +75,7 @@
 .chooseAndUploadFile{
     padding-top: 20px;
     padding-bottom: 10px;
+    word-wrap: break-word;
 }
 
 .upload{
@@ -89,3 +91,13 @@
     background-color: #00b28f;
   }
 
+.textArea{
+    margin: 7px 0px 0px;
+    max-width: 350px;
+    height: 100px
+}
+
+.publicUrl{
+    
+    margin-top: 15px;
+}

@@ -30,8 +30,9 @@
     
 }
 
-.paragraph{
-    font-weight: 500;
+.unauth-paragraph{
+    font-weight: 400;
+    color: white;
 }
 
 .football-anatomy-button{
