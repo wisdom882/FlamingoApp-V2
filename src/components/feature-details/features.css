@@ -1,8 +1,10 @@
-.description{
-    color: white;
+
+.featurecontent{
+    color: rgb(24, 17, 17);
     font-family: Verdana;
     font-size: 15px;
     font-weight: 400;
+    margin-top: 0.5rem;
 }
 
 .right-padding{
@@ -16,7 +18,10 @@
 .features{
     display: flex;
     flex-direction: row;
-    margin-bottom: 50px;
+}
 
+.flex{
+    display: flex;
+    padding: 100px;
 }
  
