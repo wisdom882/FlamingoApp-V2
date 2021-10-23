@@ -6,53 +6,46 @@
     column-gap: 10px;
 }
 
+.background{
+     
+    background-color: rgb(104, 133, 62);
+    height:80vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("../../assets/images/soccer_new_cropped.jpg");
+    /* background-color: #201717; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 
 .text{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    text-align: center;
     min-height: 30vh;
     font-size: 24px;
-    animation: flicker 1.5s infinite alternate;
     color: #fff;
-    text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff;
+    
 }
 
-/* Flickering animation */
-@keyframes flicker {
-    
-    0%, 18%, 22%, 25%, 53%, 57%, 100% {
-  
-        text-shadow:
-        0 0 4px #fff,
-        0 0 11px #fff,
-        0 0 19px #fff,
-        0 0 40px #0fa,
-        0 0 80px #0fa,
-        0 0 90px #0fa,
-        0 0 100px #0fa,
-        0 0 150px #0fa;
-    
-    }
-    
-    20%, 24%, 55% {        
-        text-shadow: none;
-    }    
-  }
-  
-      /* 0 0 42px #0fa,
-      0 0 82px #0fa,
-      0 0 92px #0fa,
-      0 0 102px #0fa,
-      0 0 151px #0fa;
-} */
+.unauth-paragraph{
+    font-weight: 400;
+    color: white;
+}
 
+.football-anatomy-button{
+    margin-top: 24px;
+    border-radius: 8px;
+    background-color: #3182ce;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    padding: 16px;
+}
 
-/* h2{
-    position: relative;
-    font-size: 14vw;
-    text-transform: uppercase;
-} */
+.football-anatomy-button:hover{
+    background-color: #2573bb;
+    cursor: pointer;
+}

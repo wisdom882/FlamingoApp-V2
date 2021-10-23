@@ -5,10 +5,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 
-.app-wrapper{
+/* .app-wrapper{
     background-color: #fff;
     min-width: 350px;
     min-height: 650px;
@@ -16,3 +16,8 @@
     box-sizing: border-box;
     border-radius: 5px;
 } */
+
+.signupsuccess{
+    height: 70vh;
+}
+

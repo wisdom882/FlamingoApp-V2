@@ -52,8 +52,8 @@ const SignUp = ({ history }) => {
   };
   return (
     <div className="sign-up">
-      <h2 className="title">I do not have an account</h2>
-      <span>Sign up email and password</span>
+      <h2 className="title">Don't have an account?</h2>
+      <span>Sign up with email and password</span>
 
       <form className="sign-up-form" onSubmit={handleSubmit}>
         <FormInput

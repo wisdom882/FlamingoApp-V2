@@ -22,7 +22,6 @@ function App() {
   return (
     <RestApiProvider>
       <div className="App">
-        <div className="background"></div>
         <Header />
         <Switch>
           <Route path="/userhome" component={Home} />
@@ -37,7 +36,7 @@ function App() {
           <Route path="/signUpSuccess" component={SignUpSuccess} />
           <Redirect to="/not-found" />
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </RestApiProvider>
   );

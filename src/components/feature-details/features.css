@@ -1,0 +1,27 @@
+
+.featurecontent{
+    color: rgb(24, 17, 17);
+    font-family: Verdana;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+.right-padding{
+    padding-right: 10%;
+}
+
+.left-padding{
+    padding-left: 10%;
+}
+
+.features{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex{
+    display: flex;
+    padding: 100px;
+}
+ 

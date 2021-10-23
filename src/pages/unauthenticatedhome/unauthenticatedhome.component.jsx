@@ -1,25 +1,22 @@
 import React from "react";
-import FootballDetails from "../../components/football-details/football-details.component";
 import "./unauthenticatedhome.styles.css";
-
-import HeroBanner from "../../components/herobanner/herobanner.component";
+import Features from "../../components/feature-details/features.jsx";
 
 const UnAuthenticatedHome = () => {
   return (
     <div>
-      <div className="text">
-        <h1 data-text="Football in glance.">Football in a glance</h1>
+      <div className="background">
+        <div className="text">
+          <h1 data-text="Football in glance.">Football in a glance</h1>
+          <p className="unauth-paragraph">
+            A short dive into the inner workings of football
+          </p>
+          <a href="/login" className="football-anatomy-button">
+            Football Anatomy
+          </a>
+        </div>
       </div>
-      <FootballDetails detailsType="HomePage" />
-      {/* <div className="unAuthHome">
-        <HeroBanner
-          imageUrl="Games.jpg"
-          text="Football Anatomy"
-          textPosition="flex-end"
-          gridNumber="1"
-          path="/login"
-        />
-      </div> */}
+      <Features type="homepageFeatures" />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 .paragraph{
-    color: white;
+    color: rgb(0, 0, 0);
     font-family: Verdana;
     font-size: 15px;
     font-weight: 400;
@@ -18,7 +18,7 @@
 
 }
 
-.description{
+.featuredescription{
     width: 50%
 }
 
