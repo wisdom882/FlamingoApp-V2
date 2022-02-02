@@ -2,6 +2,8 @@
     width: 35vw;
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
+    
 }
 
 .sign-in > .title {
@@ -15,5 +17,6 @@
 .sign-in .buttons {
     display: flex;
     justify-content: space-between;
+  
     
 }

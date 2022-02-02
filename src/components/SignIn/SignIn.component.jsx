@@ -1,82 +1,83 @@
-import  React from 'react'
+import React, { useCallback } from "react";
 
-import FormInput from '../../components/form-input/form-input.component'
+import FormInput from "../../components/form-input/form-input.component";
+import "./SignIn.styles.css";
+import CustomButton from "../../components/custom-button/custom-button.component";
 
-import './SignIn.styles.css'
+import { useRestApi } from "../../context/restApiContext";
 
-import CustomButton from '../../components/custom-button/custom-button.component'
+const SignIn = ({ history }) => {
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
 
-import { useFirebase } from '../../context/firebaseContext'
+  const { loginUser, user, signOut } = useRestApi();
+  //const {auth, googleProvider} = useFirebase()
 
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    name === "email" ? setEmail(value) : setPassword(value);
+  };
 
-const SignIn = ({history}) => {
-    const [email, setEmail] = React.useState('')
-    const [password, setPassword] = React.useState('')
+  const handleSubmit = useCallback(
+    async (event) => {
+      event.preventDefault();
+      const returnedUser = await loginUser(email, password);
+      console.log("user Signed in", returnedUser);
+      if (returnedUser != null) {
+        history.replace("/footballanatomy");
+      }
+      let now = new Date();
+      now.setMinutes(now.getMinutes() + 15);
+      let expire = new Date(now);
+      document.cookie = `user=${JSON.stringify(
+        returnedUser
+      )}; expires=${expire.toUTCString()}`;
+      setEmail("");
+      setPassword("");
+    },
+    [email, history, loginUser, password]
+  );
 
-    const { auth,googleProvider } = useFirebase()
-    
+  return (
+    <div className="sign-in">
+      <h2>Already an account?</h2>
+      <span>-Sign in with your email and password</span>
 
-    const handleChange = (event) => {
-        const {name, value} = event.target
-        name === 'email' ? setEmail(value) : setPassword(value)
-    }
+      <form onSubmit={handleSubmit}>
+        <div>
+          <FormInput
+            name="email"
+            type="email"
+            value={email}
+            label="Email"
+            handleChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <FormInput
+            name="password"
+            type="password"
+            value={password}
+            label="Password"
+            handleChange={handleChange}
+            required
+          />
+        </div>
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-    
-        try {
-          const {user} = await auth.signInWithEmailAndPassword(email, password);
-          if(user !== null)
-          {
-            history.replace("/userhome");
-          }
-          setEmail("");
-          setPassword("");
-        } catch (error) {
-          console.log(error);
-        }
-      };
+        <div className="buttons">
+          <CustomButton type="submit" value="submit">
+            SIGN IN
+          </CustomButton>
+          <CustomButton isGoogleSignIn>SIGN IN WITH GOOGLE</CustomButton>
+        </div>
 
-    return (
-        <div className='sign-in'>
-            <h2>I have already an account</h2>
-            <span>-Sign in with your email and password</span>
-
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <FormInput name='email' 
-                    type="email" 
-                    value={email} 
-                    label="email" 
-                    handleChange={handleChange} required/>
-                </div>
-                <div>
-                    <FormInput name='password' 
-                    type="password" 
-                    value={password} 
-                    label="password" 
-                    handleChange={handleChange} required/>
-                </div>
-                
-                
-                
-
-                <div className="buttons">
-                    <CustomButton type="submit" 
-                    value='submit'>
-                            SIGN IN
-                    </CustomButton>
-                    <CustomButton onClick={() => auth.signInWithPopup(googleProvider) } isGoogleSignIn>
-                        SIGN IN WITH GOOGLE
-                    </CustomButton>
-                </div>
-
-                {/* <div className="small-gap">
+        {/* <div className="small-gap">
                     <input type='submit' onClick={() => auth.signOut()} value="SIGN OUT"/>
                 </div> */}
-            </form>
-        </div>
-    );
+      </form>
+    </div>
+  );
 };
 
-export default SignIn
+export default SignIn;

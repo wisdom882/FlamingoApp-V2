@@ -1,35 +1,45 @@
-import React from 'react'
-
-import './footer.styles.css'
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faFacebook,
+  faInstagram,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
+import "./footer.styles.css";
 
 const Footer = () => {
-    return(
-        <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul>
-                        <li>about us</li>
-                        <li>our services</li>
-                        <li>privacy policy</li>
-                        <li>Contact</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Socials</h4>
-                    <ul>
-                        <li>Facebook</li>
-                        <li>SnapChat</li>
-                        <li>Instagram</li>
-                    </ul>
-                </div>
-                
-            </div>
+  return (
+    <footer className="footer">
+      <div className="container">
+        <div className="socialIcons">
+          <a href="#">
+            <FontAwesomeIcon icon={faFacebook} className="icons" />
+          </a>
+          <a href="#">
+            <FontAwesomeIcon icon={faInstagram} className="icons" />
+          </a>
+          <a href="#">
+            <FontAwesomeIcon icon={faGithub} className="icons" />
+          </a>
+
+          <ul className="list">
+            <li>
+              <a href="#">About</a>
+            </li>
+
+            <li>
+              <a href="#">Services</a>
+            </li>
+
+            <li>
+              <a href="#">terms</a>
+            </li>
+          </ul>
         </div>
-   </footer>
-    )
+      </div>
+    </footer>
+  );
+};
 
-}
-
-export default Footer
+export default Footer;

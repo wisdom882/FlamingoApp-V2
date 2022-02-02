@@ -1,16 +1,21 @@
-import React from 'react'
+import React, { useState } from "react";
 
-import './sign-in-and-sign-up.styles.css'
+import "./sign-in-and-sign-up.styles.css";
 
-import SignIn from '../../components/SignIn/SignIn.component'
-import SignUp from '../../components/sign-up/sign-up.component'
+import SignIn from "../../components/SignIn/SignIn.component";
+import SignUp from "../../components/sign-up/sign-up.component";
 
-const SignInAndSignUpPage = ({history}) => (
-
-    <div className='sign-in-and-sign-up'>
+const SignInAndSignUpPage = ({ history }) => {
+  return (
+    <div className="auth-container">
+      <div className="sign-in-and-sign-up">
         <SignIn history={history} />
-        <SignUp />
+      </div>
+      <div className="sign-in-and-sign-up">
+        <SignUp history={history} />
+      </div>
     </div>
-)
+  );
+};
 
-export default SignInAndSignUpPage
+export default SignInAndSignUpPage;

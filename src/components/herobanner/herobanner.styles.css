@@ -1,19 +1,85 @@
-.heroBanner{
-    background-position: center;
-    height: 40vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all;
-    transform: translateZ(0);
-    transition: transform 0.25s ease-out;
-    border-radius: 3px;
-    margin: 10px;
-    display: flex;
-    justify-content: end;
-    color: whitesmoke;
-    
+:root{
+    --clr-neutral-900: hsl(207,19%,9%);
+    --clr-neutral-100: hsl(0,0%,100%);
+    --clr-accent-400: rgb(70, 250, 136);
 }
 
-.heroBanner:hover{
+*,*::before,*::after{
+    box-sizing: border-box
+}
+
+.card{
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    line-height: 1.6;
+    background:var(--clr-neutral-900);
+    font-family: sans-serif;
+}
+
+.card-content{
+    padding: 1.5em;
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(20 0% 0% / 0.3) 20%,
+        hsl(0 0% 0% / 1)
+    );
+}
+
+.top-half{
+    
+    color: var(--clr-neutral-100);
+    background-image: url("C:\Users\bordu\OneDrive\Desktop\flamingoApp\FlamingoApp\src\assets\images\soccer.jpg");
+    background-size: cover;
+    padding: 10rem 0 0;
+    max-width: 35ch;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+
+.top-half:hover{
     transform: scale(1.05);
+}
+
+.imageContainer img{
+    overflow: hidden;
+    height: 200px;
+}
+
+.card-title{
+    position: relative;
+    width: max-content;
+}
+
+.card-title::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: var(--clr-accent-400);
+    transition: transform 500ms ease;
+}
+
+.top-half:hover .card-title::after{
+    transform: scaleX(1);
+}
+.card-body{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.card-button{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-accent-900);
+    background-color: var(--clr-accent-400);
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.25rem;
+}
+
+.card-button:hover, .card-button:focus{
+    background-color: rgb(75, 260, 160);
 }

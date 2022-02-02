@@ -4,18 +4,7 @@ body {
  
 }
 
-.background{
-     
-     background-color: rgb(104, 133, 62);
-     position: absolute;
-     height: 100vh;
-     width: 100%;
-     z-index: -1;
-     background-image: url('./assets/images/soccer.jpg');
-     background-size: cover;
-     position: fixed;
-     background-repeat: no-repeat;
-}
+
 
 * {
   box-sizing: border-box;

@@ -1,6 +1,7 @@
 .Logo{
     display:flex;
-    margin: 10px;
+    margin: 0px;
     transition: rotate;
-    filter: contrast(5%);
+    filter: contrast(15%);
+    padding-left: 10px;
 }
